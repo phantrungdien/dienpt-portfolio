@@ -6,10 +6,4 @@ export const themeConfig: ThemeConfig = {
     colorBgContainer: "#ffffff",
     fontFamily: "Nunito Sans, system-ui, sans-serif",
   },
-  // components: {
-  //   Message: {
-  //     contentBg: "#333333",
-  //     colorText: "#FFFFFF",
-  //   },
-  // },
 }

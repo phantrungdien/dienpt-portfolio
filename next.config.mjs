@@ -20,7 +20,7 @@ const nextConfig = {
     loader: "default",
     contentDispositionType: "inline",
     remotePatterns: [],
-  },
+  }
 }
 
 export default withNextIntl(nextConfig)

@@ -1,15 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { routing } from '@i18n/routing';
+import createMiddleware from 'next-intl/middleware';
 
-export function middleware(req: NextRequest) {
-  const url = req.nextUrl;
 
-  if (url.pathname === "/en" || url.pathname.startsWith("/en/")) {
-    return NextResponse.redirect(new URL(url.pathname.replace(/^\/en/, "/"), req.url));
-  }
+const intlMiddleware = createMiddleware(routing);
 
-  return NextResponse.next();
-}
-
-export const config = {
-  matcher: ["/en/:path*"],
-};
+export default intlMiddleware;

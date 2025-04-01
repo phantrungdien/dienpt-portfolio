@@ -2,6 +2,7 @@
 const config = {
   plugins: {
     tailwindcss: {},
+    autoprefixer: {},
     // "postcss-preset-env": {},
     // cssnano: {
     //   preset: "default", // Minify CSS

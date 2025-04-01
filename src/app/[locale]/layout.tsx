@@ -1,4 +1,3 @@
-// import { Lexend } from "next/font/google"
 import "../globals.css"
 import { AppProvider } from "@provider/AppProvider"
 import { CookiesProvider } from "next-client-cookies/server"

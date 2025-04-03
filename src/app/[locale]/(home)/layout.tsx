@@ -4,7 +4,7 @@ type Props = {
 
 export default async function LayoutStandard({ children }: Props) {
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col justify-center">
         {children}
     </div>
   );

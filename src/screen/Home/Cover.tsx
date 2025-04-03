@@ -1,17 +1,16 @@
 "use client"
 
 import { useCallback } from "react"
-import type { Container, Engine } from "tsparticles-engine"
+import type { Engine } from "tsparticles-engine"
 import Particles from "react-tsparticles"
 import { loadSlim } from "tsparticles-slim"
 import { appConfig } from "@config/app"
 
-export default function App() {
+export const Cover = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {}, [])
 
   const srcImages = [
     "/v1743565797/nestjs_mhmjxs.png",
@@ -54,12 +53,8 @@ export default function App() {
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
-        fullScreen: {
-          enable: true,
-          zIndex: 1,
-        },
+        fullScreen: { enable: false },
         detectRetina: true,
         fpsLimit: 60,
         interactivity: {
@@ -151,7 +146,7 @@ export default function App() {
               area: 800,
             },
             limit: 100,
-            value: 50,
+            value: 30,
           },
           opacity: {
             animation: {
@@ -221,6 +216,7 @@ export default function App() {
           size: "cover",
         },
       }}
+      className="h-screen"
     />
   )
 }

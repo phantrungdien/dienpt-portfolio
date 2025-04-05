@@ -210,13 +210,13 @@ export const Cover = () => {
           url: "",
         },
         background: {
-          image: "linear-gradient(180deg, #eafaec, #f1f5f8, #eafaec)",
+          image: "linear-gradient(180deg, var(--background-color), var(--background-color-cover), var(--background-color))",
           position: "50% 50%",
           repeat: "no-repeat",
           size: "cover",
         },
       }}
-      className="h-screen"
+      className="h-[calc(100vh-var(--header-height))] w-full"
     />
   )
 }
